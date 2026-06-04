@@ -1,0 +1,409 @@
+<mxfile host="app.diagrams.net" agent="Codex" pages="2">
+  <diagram id="load-planes-part-1" name="loadPlanes 1">
+    <mxGraphModel dx="2571" dy="1384" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1050" pageHeight="1550" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="e_start_open" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="open_file">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_start_vars" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;dashed=1;strokeWidth=2;strokeColor=#000000;exitX=1;exitY=0.5;entryX=0;entryY=0.15;" target="vars">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_open_file" edge="1" parent="1" source="open_file" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="file_ok">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_file_yes" edge="1" parent="1" source="file_ok" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;fontSize=10;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="count_zero" value="да">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_file_no" edge="1" parent="1" source="file_ok" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;fontSize=10;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" target="open_message" value="нет">
+          <mxGeometry relative="1" x="-0.9078" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="760" y="206" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_open_message_add" edge="1" parent="1" source="open_message" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="open_add_error">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_open_add_output" edge="1" parent="1" source="open_add_error" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="output_files">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_output_return_false" edge="1" parent="1" source="output_files" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="return_false">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_return_false_end" edge="1" parent="1" source="return_false" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="46BP5C4vmeO5gnWFBj_3-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="760" y="530" />
+              <mxPoint x="995" y="530" />
+            </Array>
+            <mxPoint x="1003" y="1253" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_count_line" edge="1" parent="1" source="count_zero" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="line_zero">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_line_getline" edge="1" parent="1" source="line_zero" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="getline">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_getline_read" edge="1" parent="1" source="getline" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="line_read">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_read_yes" edge="1" parent="1" source="line_read" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;fontSize=10;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="inc_line" value="да">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_read_no" edge="1" parent="1" source="line_read" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;fontSize=10;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" target="eof" value="нет">
+          <mxGeometry relative="1" x="-0.8936" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="690" y="491" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_eof_yes" edge="1" parent="1" source="eof" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;fontSize=10;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="bridge_out_1" value="да">
+          <mxGeometry relative="1" x="-0.9238" as="geometry">
+            <mxPoint y="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="690" y="1134" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_eof_no" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;fontSize=10;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" value="нет">
+          <mxGeometry relative="1" x="-0.7349" as="geometry">
+            <mxPoint x="-1" as="offset" />
+            <Array as="points">
+              <mxPoint x="895" y="563" />
+            </Array>
+            <mxPoint x="780" y="565" as="sourcePoint" />
+            <mxPoint x="895" y="612" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_long_inc_error" edge="1" parent="1" source="long_inc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="long_error">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_long_error_clear" edge="1" parent="1" source="long_error" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="file_clear">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_clear_ignore" edge="1" parent="1" source="file_clear" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="file_ignore">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_inc_empty" edge="1" parent="1" source="inc_line" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="not_empty">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_empty_yes" edge="1" parent="1" source="not_empty" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;fontSize=10;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="room" value="да">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_empty_no" edge="1" parent="1" source="not_empty" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;fontSize=10;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" target="empty_error" value="нет">
+          <mxGeometry relative="1" x="-0.8131" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="545" y="641" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_room_yes" edge="1" parent="1" source="room" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;fontSize=10;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="plane_decl" value="да">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_room_no" edge="1" parent="1" source="room" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;fontSize=10;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" target="max_error" value="нет">
+          <mxGeometry relative="1" x="-0.8291" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="545" y="741" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_plane_error" edge="1" parent="1" source="plane_decl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="error_decl">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_error_parse" edge="1" parent="1" source="error_decl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="parse_call">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_parse_call_ok" edge="1" parent="1" source="parse_call" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="parse_ok">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_parse_yes" edge="1" parent="1" source="parse_ok" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;fontSize=10;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="logic_call" value="да">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_parse_no" edge="1" parent="1" source="parse_ok" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;fontSize=10;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" target="parse_error" value="нет">
+          <mxGeometry relative="1" x="-0.8222" y="1" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="545" y="1015" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_logic_call_ok" edge="1" parent="1" source="logic_call" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="logic_ok">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_logic_yes" edge="1" parent="1" source="logic_ok" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;fontSize=10;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="save_plane" value="да">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_logic_no" edge="1" parent="1" source="logic_ok" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;fontSize=10;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" target="logic_error" value="нет">
+          <mxGeometry relative="1" x="-0.8214" y="1" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="545" y="1191" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_save_count" edge="1" parent="1" source="save_plane" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="count_inc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_loop_main" edge="1" parent="1" source="count_inc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;fontSize=10;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="getline" value="continue">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="1400" />
+              <mxPoint x="70" y="1400" />
+              <mxPoint x="70" y="360" />
+              <mxPoint x="260" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_empty_loop" edge="1" parent="1" source="empty_error" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="545" y="1400" />
+              <mxPoint x="70" y="1400" />
+            </Array>
+            <mxPoint x="70" y="1400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_max_loop" edge="1" parent="1" source="max_error" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="545" y="1400" />
+              <mxPoint x="70" y="1400" />
+            </Array>
+            <mxPoint x="70" y="1400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_parse_loop" edge="1" parent="1" source="parse_error" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="545" y="1400" />
+              <mxPoint x="70" y="1400" />
+            </Array>
+            <mxPoint x="70" y="1390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_logic_loop" edge="1" parent="1" source="logic_error" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="545" y="1400" />
+              <mxPoint x="70" y="1400" />
+            </Array>
+            <mxPoint x="70" y="1400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_ignore_loop" edge="1" parent="1" source="file_ignore" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="895" y="1400" />
+              <mxPoint x="70" y="1400" />
+            </Array>
+            <mxPoint x="70" y="1400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="start" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;absoluteArcSize=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="начало" vertex="1">
+          <mxGeometry height="34" width="110" x="205" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vars" parent="1" style="shape=mxgraph.flowchart.annotation_1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="&lt;b&gt;ПЕРЕМЕННЫЕ&lt;/b&gt;&lt;br&gt;fileName - имя входного файла&lt;br&gt;planes - массив корректных записей&lt;br&gt;count - количество корректных записей&lt;br&gt;errors - массив ошибок&lt;br&gt;errorCount - количество ошибок&lt;br&gt;file - поток чтения файла&lt;br&gt;lineNumber - номер строки файла&lt;br&gt;line[LINE_SIZE] - текущая строка&lt;br&gt;plane - текущая запись&lt;br&gt;error - текст ошибки" vertex="1">
+          <mxGeometry height="150" width="360" x="385" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="open_file" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="Открытие потока&lt;br&gt;чтения из файла&lt;br&gt;fileName" vertex="1">
+          <mxGeometry height="50" width="160" x="180" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="file_ok" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="file&lt;br&gt;открыт?" vertex="1">
+          <mxGeometry height="72" width="180" x="170" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="count_zero" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="count = 0" vertex="1">
+          <mxGeometry height="28" width="130" x="195" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="line_zero" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="lineNumber = 0" vertex="1">
+          <mxGeometry height="28" width="150" x="185" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="getline" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="file.getline(line,&lt;br&gt;LINE_SIZE)" vertex="1">
+          <mxGeometry height="48" width="150" x="185" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="line_read" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="строка&lt;br&gt;считана?" vertex="1">
+          <mxGeometry height="72" width="180" x="170" y="455" as="geometry" />
+        </mxCell>
+        <mxCell id="inc_line" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="lineNumber++" vertex="1">
+          <mxGeometry height="28" width="140" x="190" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="not_empty" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="строка&lt;br&gt;не пустая?" vertex="1">
+          <mxGeometry height="72" width="180" x="170" y="605" as="geometry" />
+        </mxCell>
+        <mxCell id="room" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="count &amp;lt;&lt;br&gt;MAX_PLANES" vertex="1">
+          <mxGeometry height="72" width="180" x="170" y="705" as="geometry" />
+        </mxCell>
+        <mxCell id="plane_decl" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="Plane plane" vertex="1">
+          <mxGeometry height="28" width="130" x="195" y="805" as="geometry" />
+        </mxCell>
+        <mxCell id="error_decl" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="error = &quot;&quot;" vertex="1">
+          <mxGeometry height="28" width="130" x="195" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="parse_call" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;size=0.12;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="parsePlane(line,&lt;br&gt;plane, error)" vertex="1">
+          <mxGeometry height="44" width="170" x="175" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="parse_ok" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="разбор&lt;br&gt;успешен?" vertex="1">
+          <mxGeometry height="72" width="180" x="170" y="980" as="geometry" />
+        </mxCell>
+        <mxCell id="logic_call" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;size=0.12;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="checkPlaneLogic(&lt;br&gt;planes, count,&lt;br&gt;plane, error)" vertex="1">
+          <mxGeometry height="56" width="170" x="175" y="1078" as="geometry" />
+        </mxCell>
+        <mxCell id="logic_ok" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="логическая&lt;br&gt;проверка&lt;br&gt;успешна?" vertex="1">
+          <mxGeometry height="82" width="180" x="170" y="1150" as="geometry" />
+        </mxCell>
+        <mxCell id="save_plane" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="planes[count] = plane" vertex="1">
+          <mxGeometry height="28" width="160" x="180" y="1260" as="geometry" />
+        </mxCell>
+        <mxCell id="count_inc" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="count++" vertex="1">
+          <mxGeometry height="28" width="120" x="200" y="1310" as="geometry" />
+        </mxCell>
+        <mxCell id="open_message" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="message = &quot;не удалось&lt;br&gt;открыть файл&quot;" vertex="1">
+          <mxGeometry height="44" width="150" x="685" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="open_add_error" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;size=0.12;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="addError(errors,&lt;br&gt;errorCount, 0,&lt;br&gt;&quot;&quot;, message)" vertex="1">
+          <mxGeometry height="58" width="170" x="675" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="output_files" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="вывод&lt;br&gt;&quot;Файлы для проверки: ...&quot;" vertex="1">
+          <mxGeometry height="50" width="180" x="670" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="return_false" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="return false" vertex="1">
+          <mxGeometry height="28" width="120" x="700" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="eof" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="file.eof()" vertex="1">
+          <mxGeometry height="72" width="180" x="600" y="527" as="geometry" />
+        </mxCell>
+        <mxCell id="long_inc" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="lineNumber++" vertex="1">
+          <mxGeometry height="28" width="120" x="835" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="long_error" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;size=0.12;strokeWidth=2;fontSize=9;fillColor=#ffffff;strokeColor=#000000;" value="addError(...,&lt;br&gt;&quot;слишком длинная&lt;br&gt;строка&quot;)" vertex="1">
+          <mxGeometry height="58" width="160" x="815" y="675" as="geometry" />
+        </mxCell>
+        <mxCell id="file_clear" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="file.clear()" vertex="1">
+          <mxGeometry height="28" width="100" x="845" y="765" as="geometry" />
+        </mxCell>
+        <mxCell id="file_ignore" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="file.ignore(...)" vertex="1">
+          <mxGeometry height="28" width="120" x="835" y="825" as="geometry" />
+        </mxCell>
+        <mxCell id="empty_error" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;size=0.12;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="addError(...,&lt;br&gt;&quot;пустая строка&quot;)" vertex="1">
+          <mxGeometry height="48" width="150" x="470" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="max_error" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;size=0.12;strokeWidth=2;fontSize=9;fillColor=#ffffff;strokeColor=#000000;" value="addError(...,&lt;br&gt;&quot;слишком много&lt;br&gt;корректных записей&quot;)" vertex="1">
+          <mxGeometry height="58" width="150" x="470" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="parse_error" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;size=0.12;strokeWidth=2;fontSize=9;fillColor=#ffffff;strokeColor=#000000;" value="addError(errors,&lt;br&gt;errorCount,&lt;br&gt;lineNumber, line,&lt;br&gt;error)" vertex="1">
+          <mxGeometry height="64" width="150" x="470" y="1045" as="geometry" />
+        </mxCell>
+        <mxCell id="logic_error" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;size=0.12;strokeWidth=2;fontSize=9;fillColor=#ffffff;strokeColor=#000000;" value="addError(errors,&lt;br&gt;errorCount,&lt;br&gt;lineNumber, line,&lt;br&gt;error)" vertex="1">
+          <mxGeometry height="64" width="150" x="470" y="1220" as="geometry" />
+        </mxCell>
+        <mxCell id="bridge_out_1" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=2;fontSize=14;fontStyle=1;fillColor=#ffffff;strokeColor=#000000;" value="1" vertex="1">
+          <mxGeometry height="40" width="40" x="670" y="1150" as="geometry" />
+        </mxCell>
+        <mxCell id="46BP5C4vmeO5gnWFBj_3-2" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=2;fontSize=14;fontStyle=1;fillColor=#ffffff;strokeColor=#000000;" value="2" vertex="1">
+          <mxGeometry height="40" width="40" x="975" y="1306" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="load-planes-part-2" name="loadPlanes 2">
+    <mxGraphModel dx="1414" dy="761" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1050" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bridge_in_1" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=2;fontSize=14;fontStyle=1;fillColor=#ffffff;strokeColor=#000000;" value="1" vertex="1">
+          <mxGeometry height="40" width="40" x="403" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="has_lines" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="lineNumber != 0" vertex="1">
+          <mxGeometry height="85" width="210" x="318" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="has_count" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="count != 0" vertex="1">
+          <mxGeometry height="85" width="210" x="318" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="empty_file_error" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;size=0.12;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="addError(...,&lt;br&gt;&quot;файл пустой&quot;)" vertex="1">
+          <mxGeometry height="54" width="160" x="563" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="return_true" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="return true" vertex="1">
+          <mxGeometry height="30" width="120" x="363" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="end_2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;absoluteArcSize=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="конец" vertex="1">
+          <mxGeometry height="34" width="110" x="368" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="e_bridge_has_lines" edge="1" parent="1" source="bridge_in_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;" target="has_lines">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_has_lines_yes" edge="1" parent="1" source="has_lines" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;" target="has_count" value="да">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_has_lines_no" edge="1" parent="1" source="has_lines" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="empty_file_error" value="нет">
+          <mxGeometry relative="1" x="-0.8249" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_empty_file_return" edge="1" parent="1" source="empty_file_error" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;" target="return_true">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="643" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_has_count_yes" edge="1" parent="1" source="has_count" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;" target="return_true" value="да">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="423" y="420" />
+              <mxPoint x="423" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_has_count_no" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;" value="нет">
+          <mxGeometry relative="1" x="-0.8528" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="531" y="290" />
+              <mxPoint x="643" y="290" />
+            </Array>
+            <mxPoint x="531" y="288" as="sourcePoint" />
+            <mxPoint x="643" y="325.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_no_valid_return" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="643" y="470" />
+            </Array>
+            <mxPoint x="643" y="389" as="sourcePoint" />
+            <mxPoint x="490" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_return_true_end" edge="1" parent="1" source="return_true" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;" target="end_2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="423" y="530" />
+              <mxPoint x="423" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="no_valid_error" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;size=0.12;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="addError(...,&lt;br&gt;&quot;корректных записей&lt;br&gt;в файле нет&quot;)" vertex="1">
+          <mxGeometry height="64" width="170" x="563" y="325" as="geometry" />
+        </mxCell>
+        <mxCell id="ktIYYXhdc2EHpr4QcTKP-2" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="202" y="540" />
+            </Array>
+            <mxPoint x="202" y="70" as="sourcePoint" />
+            <mxPoint x="422" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ktIYYXhdc2EHpr4QcTKP-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=2;fontSize=14;fontStyle=1;fillColor=#ffffff;strokeColor=#000000;" value="2" vertex="1">
+          <mxGeometry height="40" width="40" x="182" y="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

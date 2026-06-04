@@ -1,0 +1,254 @@
+<mxfile host="app.diagrams.net" agent="Codex">
+  <diagram id="parsePlane-one-page" name="parsePlane">
+    <mxGraphModel dx="3142" dy="1691" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="920" pageHeight="1880" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="e_start_position" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="position_zero">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_start_vars" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;dashed=1;strokeWidth=2;strokeColor=#000000;exitX=1;exitY=0.5;entryX=0;entryY=0.15;" target="vars">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_position_sscanf" edge="1" parent="1" source="position_zero" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="sscanf_block">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_sscanf_fields" edge="1" parent="1" source="sscanf_block" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="fields_ok">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_fields_yes" edge="1" parent="1" source="fields_ok" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="not_space">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_fields_no" edge="1" parent="1" source="fields_ok" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" target="error_fields">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="645" y="315" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_error_fields_false" edge="1" parent="1" source="error_fields" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="return_false">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="645" y="1660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_space_yes" edge="1" parent="1" source="not_space" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="city_exists">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_space_no" edge="1" parent="1" source="not_space" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" target="position_inc">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_position_loop" edge="1" parent="1" source="position_inc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;fontSize=10;exitX=0.5;exitY=1;" value="continue">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="535" />
+              <mxPoint x="95" y="535" />
+              <mxPoint x="95" y="370" />
+            </Array>
+            <mxPoint x="260" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_city_yes" edge="1" parent="1" source="city_exists" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="city_len">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_city_no" edge="1" parent="1" source="city_exists" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" target="error_city_missing">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="645" y="610" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_city_missing_false" edge="1" parent="1" source="error_city_missing" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="return_false">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="645" y="1660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_len_yes" edge="1" parent="1" source="city_len" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="minutes_zero">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_len_no" edge="1" parent="1" source="city_len" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" target="error_city_long">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="645" y="765" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_city_long_false" edge="1" parent="1" source="error_city_long" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="return_false">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="645" y="1660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_minutes_parse" edge="1" parent="1" source="minutes_zero" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="parse_time_call">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_parse_time_ok" edge="1" parent="1" source="parse_time_call" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="time_ok">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_time_yes" edge="1" parent="1" source="time_ok" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="board_call">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_time_no" edge="1" parent="1" source="time_ok" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" target="error_time">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="466" y="1030" />
+              <mxPoint x="466" y="990" />
+              <mxPoint x="645" y="990" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_time_false" edge="1" parent="1" source="error_time" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="return_false">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="645" y="1660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_board_call_ok" edge="1" parent="1" source="board_call" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="board_ok">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_board_yes" edge="1" parent="1" source="board_ok" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="save_minutes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_board_no" edge="1" parent="1" source="board_ok" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" target="error_board">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="645" y="1230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_board_false" edge="1" parent="1" source="error_board" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="return_false">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="645" y="1660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_save_city" edge="1" parent="1" source="save_minutes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="copy_city">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_city_true" edge="1" parent="1" source="copy_city" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="return_true">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_true_end" edge="1" parent="1" source="return_true" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_false_end" edge="1" parent="1" source="return_false" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="end">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="645" y="1560" />
+              <mxPoint x="260" y="1560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="start" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;absoluteArcSize=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="начало" vertex="1">
+          <mxGeometry height="34" width="110" x="205" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vars" parent="1" style="shape=mxgraph.flowchart.annotation_1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="&lt;b&gt;ПЕРЕМЕННЫЕ&lt;/b&gt;&lt;br&gt;line - исходная строка файла&lt;br&gt;plane - структура с разобранными данными&lt;br&gt;error - текст ошибки&lt;br&gt;position - позиция начала пункта отправления&lt;br&gt;fields - количество считанных полей&lt;br&gt;minutes - время посадки в минутах" vertex="1">
+          <mxGeometry height="130" width="390" x="385" y="27" as="geometry" />
+        </mxCell>
+        <mxCell id="position_zero" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="position = 0" vertex="1">
+          <mxGeometry height="30" width="120" x="200" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="sscanf_block" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=9;fillColor=#ffffff;strokeColor=#000000;" value="fields = sscanf(line,&lt;br&gt;&quot;%5s %31s %15s %n&quot;,&lt;br&gt;plane.landingTime,&lt;br&gt;plane.model,&lt;br&gt;plane.boardNumber,&lt;br&gt;&amp;amp;position)" vertex="1">
+          <mxGeometry height="86" width="210" x="155" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="fields_ok" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="fields &amp;gt;= 3" vertex="1">
+          <mxGeometry height="90" width="200" x="160" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="not_space" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="line[position] != &#39; &#39;&lt;br&gt;&amp;amp;&amp;amp;&lt;br&gt;line[position] != &#39;\\t&#39;" vertex="1">
+          <mxGeometry height="100" width="220" x="150" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="position_inc" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="position++" vertex="1">
+          <mxGeometry height="30" width="110" x="445" y="465" as="geometry" />
+        </mxCell>
+        <mxCell id="city_exists" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="line[position] != &#39;\\0&#39;" vertex="1">
+          <mxGeometry height="90" width="200" x="160" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="city_len" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="strlen(line + position)&lt;br&gt;&amp;lt; CITY_SIZE" vertex="1">
+          <mxGeometry height="90" width="200" x="160" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="minutes_zero" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="minutes = 0" vertex="1">
+          <mxGeometry height="30" width="120" x="200" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="parse_time_call" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;size=0.12;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="parseTime(plane.landingTime,&lt;br&gt;minutes)" vertex="1">
+          <mxGeometry height="48" width="190" x="165" y="915" as="geometry" />
+        </mxCell>
+        <mxCell id="time_ok" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="время&lt;br&gt;корректно?" vertex="1">
+          <mxGeometry height="90" width="200" x="160" y="985" as="geometry" />
+        </mxCell>
+        <mxCell id="board_call" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;size=0.12;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="isGoodBoardNumber(&lt;br&gt;plane.boardNumber)" vertex="1">
+          <mxGeometry height="48" width="190" x="165" y="1110" as="geometry" />
+        </mxCell>
+        <mxCell id="board_ok" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="бортовой номер&lt;br&gt;корректен?" vertex="1">
+          <mxGeometry height="90" width="200" x="160" y="1185" as="geometry" />
+        </mxCell>
+        <mxCell id="save_minutes" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="plane.landingMinutes = minutes" vertex="1">
+          <mxGeometry height="30" width="210" x="155" y="1315" as="geometry" />
+        </mxCell>
+        <mxCell id="copy_city" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="strcpy(plane.city,&lt;br&gt;line + position)" vertex="1">
+          <mxGeometry height="46" width="170" x="175" y="1380" as="geometry" />
+        </mxCell>
+        <mxCell id="return_true" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="return true" vertex="1">
+          <mxGeometry height="30" width="120" x="200" y="1465" as="geometry" />
+        </mxCell>
+        <mxCell id="return_false" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="return false" vertex="1">
+          <mxGeometry height="30" width="120" x="585" y="1440" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;absoluteArcSize=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="конец" vertex="1">
+          <mxGeometry height="34" width="110" x="205" y="1585" as="geometry" />
+        </mxCell>
+        <mxCell id="error_fields" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="error = &quot;нужно минимум 4 поля:&lt;br&gt;время марка борт пункт&quot;" vertex="1">
+          <mxGeometry height="54" width="190" x="550" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="error_city_missing" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="error = &quot;отсутствует&lt;br&gt;пункт отправления&quot;" vertex="1">
+          <mxGeometry height="50" width="180" x="555" y="635" as="geometry" />
+        </mxCell>
+        <mxCell id="error_city_long" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="error = &quot;пункт отправления&lt;br&gt;слишком длинный&quot;" vertex="1">
+          <mxGeometry height="50" width="180" x="555" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="error_time" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=9;fillColor=#ffffff;strokeColor=#000000;" value="error = &quot;время должно быть&lt;br&gt;в формате HH:MM&lt;br&gt;от 00:00 до 23:59&quot;" vertex="1">
+          <mxGeometry height="64" width="180" x="555" y="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="error_board" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=9;fillColor=#ffffff;strokeColor=#000000;" value="error = &quot;бортовой номер&lt;br&gt;должен быть&lt;br&gt;в формате Б-хххх&quot;" vertex="1">
+          <mxGeometry height="64" width="180" x="555" y="1268" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_fields_yes" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;" value="да" vertex="1">
+          <mxGeometry height="18" width="24" x="270" y="352" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_fields_no" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;" value="нет" vertex="1">
+          <mxGeometry height="18" width="35" x="365" y="287" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_space_yes" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;" value="да" vertex="1">
+          <mxGeometry height="18" width="24" x="270" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_space_no" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;" value="нет" vertex="1">
+          <mxGeometry height="18" width="35" x="370" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_city_yes" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;" value="да" vertex="1">
+          <mxGeometry height="18" width="24" x="270" y="648" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_city_no" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;" value="нет" vertex="1">
+          <mxGeometry height="18" width="35" x="365" y="592" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_len_yes" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;" value="да" vertex="1">
+          <mxGeometry height="18" width="24" x="270" y="803" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_len_no" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;" value="нет" vertex="1">
+          <mxGeometry height="18" width="35" x="365" y="747" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_time_yes" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;" value="да" vertex="1">
+          <mxGeometry height="18" width="24" x="270" y="1068" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_time_no" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;" value="нет" vertex="1">
+          <mxGeometry height="18" width="35" x="365" y="1032" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_board_yes" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;" value="да" vertex="1">
+          <mxGeometry height="18" width="24" x="270" y="1268" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_board_no" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;" value="нет" vertex="1">
+          <mxGeometry height="18" width="35" x="365" y="1232" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

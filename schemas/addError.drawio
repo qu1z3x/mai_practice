@@ -1,0 +1,90 @@
+<mxfile host="app.diagrams.net" agent="Codex">
+  <diagram id="addError-one-page" name="addError">
+    <mxGraphModel dx="1088" dy="585" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="760" pageHeight="760" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="e_start_limit" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="limit_ok">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_start_vars" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;dashed=1;strokeWidth=2;strokeColor=#000000;exitX=1;exitY=0.5;entryX=0;entryY=0.12;" target="vars">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_limit_yes" edge="1" parent="1" source="limit_ok" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;fontSize=10;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="line_number" value="да">
+          <mxGeometry relative="1" x="-0.6667" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_limit_no" edge="1" parent="1" source="limit_ok" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;fontSize=10;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" target="return_block" value="нет">
+          <mxGeometry relative="1" x="-0.8491" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="555" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_return_end" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="555" y="635" />
+            </Array>
+            <mxPoint x="555" y="250.00000000000006" as="sourcePoint" />
+            <mxPoint x="260" y="635" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_line_yes" edge="1" parent="1" source="line_number" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;fontSize=10;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="snprintf_line" value="да">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_line_no" edge="1" parent="1" source="line_number" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;fontSize=10;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" target="snprintf_message" value="нет">
+          <mxGeometry relative="1" x="-0.8596" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="555" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_line_inc" edge="1" parent="1" source="snprintf_line" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="inc_error">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_message_inc" edge="1" parent="1" source="snprintf_message" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="555" y="545" />
+            </Array>
+            <mxPoint x="260" y="545" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_inc_end" edge="1" parent="1" source="inc_error" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;absoluteArcSize=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="начало" vertex="1">
+          <mxGeometry height="34" width="110" x="205" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="vars" parent="1" style="shape=mxgraph.flowchart.annotation_1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="&lt;b&gt;ПЕРЕМЕННЫЕ&lt;/b&gt;&lt;br&gt;errors - массив сообщений об ошибках&lt;br&gt;errorCount - количество ошибок&lt;br&gt;lineNumber - номер строки файла&lt;br&gt;line - проблемная строка&lt;br&gt;message - текст ошибки" vertex="1">
+          <mxGeometry height="92" width="310" x="380" y="41" as="geometry" />
+        </mxCell>
+        <mxCell id="limit_ok" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="errorCount &amp;lt;&lt;br&gt;MAX_ERRORS" vertex="1">
+          <mxGeometry height="100" width="200" x="160" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="return_block" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="return" vertex="1">
+          <mxGeometry height="30" width="110" x="500" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="line_number" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="lineNumber &amp;gt; 0" vertex="1">
+          <mxGeometry height="100" width="200" x="160" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="snprintf_line" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=9;fillColor=#ffffff;strokeColor=#000000;" value="snprintf(errors[errorCount],&lt;br&gt;ERROR_SIZE,&lt;br&gt;&quot;Строка %d: %s | %s&quot;,&lt;br&gt;lineNumber, message, line)" vertex="1">
+          <mxGeometry height="80" width="220" x="150" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="snprintf_message" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=9;fillColor=#ffffff;strokeColor=#000000;" value="snprintf(errors[errorCount],&lt;br&gt;ERROR_SIZE,&lt;br&gt;&quot;%s&quot;, message)" vertex="1">
+          <mxGeometry height="70" width="160" x="475" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="inc_error" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="errorCount++" vertex="1">
+          <mxGeometry height="30" width="120" x="200" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;absoluteArcSize=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="конец" vertex="1">
+          <mxGeometry height="34" width="110" x="205" y="665" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

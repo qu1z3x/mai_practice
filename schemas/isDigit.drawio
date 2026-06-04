@@ -1,0 +1,24 @@
+<mxfile host="app.diagrams.net" modified="2026-06-03T17:00:00.000Z" agent="Codex" version="24.7.17" type="device">
+  <diagram id="isDigit-one-page" name="isDigit">
+    <mxGraphModel dx="900" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="650" pageHeight="520" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="e_start_cond" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="start" target="digit_cond"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e_start_vars" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;dashed=1;strokeWidth=2;strokeColor=#000000;exitX=1;exitY=0.5;entryX=0;entryY=0.2;" edge="1" parent="1" source="start" target="vars"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e_digit_yes" value="да" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;fontSize=10;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="digit_cond" target="return_true"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e_digit_no" value="нет" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;fontSize=10;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="digit_cond" target="return_false"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="455" y="180"/></Array></mxGeometry></mxCell>
+        <mxCell id="e_true_end" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="return_true" target="end"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e_false_end" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;" edge="1" parent="1" source="return_false"><mxGeometry relative="1" as="geometry"><mxPoint x="250" y="385" as="targetPoint"/><Array as="points"><mxPoint x="455" y="385"/></Array></mxGeometry></mxCell>
+
+        <mxCell id="start" value="начало" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;absoluteArcSize=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="195" y="35" width="110" height="34" as="geometry"/></mxCell>
+        <mxCell id="vars" value="&lt;b&gt;ПЕРЕМЕННЫЕ&lt;/b&gt;&lt;br&gt;ch - проверяемый символ&lt;br&gt;result - результат проверки" style="shape=mxgraph.flowchart.annotation_1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="360" y="30" width="220" height="70" as="geometry"/></mxCell>
+        <mxCell id="digit_cond" value="ch &amp;gt;= '0'&lt;br&gt;&amp;amp;&amp;amp;&lt;br&gt;ch &amp;lt;= '9'" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="160" y="125" width="180" height="110" as="geometry"/></mxCell>
+        <mxCell id="return_true" value="return true" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="195" y="285" width="110" height="30" as="geometry"/></mxCell>
+        <mxCell id="return_false" value="return false" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="400" y="260" width="110" height="30" as="geometry"/></mxCell>
+        <mxCell id="end" value="конец" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;absoluteArcSize=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1"><mxGeometry x="195" y="385" width="110" height="34" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

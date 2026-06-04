@@ -1,0 +1,93 @@
+<mxfile host="app.diagrams.net" agent="Codex">
+  <diagram id="printTable-one-page" name="printTable">
+    <mxGraphModel dx="1488" dy="801" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="760" pageHeight="950" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="e_start_title" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="out_title">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_start_vars" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;dashed=1;strokeWidth=2;strokeColor=#000000;exitX=1;exitY=0.5;entryX=0;entryY=0.15;" target="vars">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_title_header" edge="1" parent="1" source="out_title" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="out_header">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_header_line" edge="1" parent="1" source="out_header" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="out_separator">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_line_i" edge="1" parent="1" source="out_separator" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="init_i">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_i_cond" edge="1" parent="1" source="init_i" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="loop_cond">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_loop_yes" edge="1" parent="1" source="loop_cond" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="plane_ref">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_loop_no" edge="1" parent="1" source="loop_cond" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" target="end">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="505" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_plane_out" edge="1" parent="1" source="plane_ref" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="out_row">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_out_inc" edge="1" parent="1" source="out_row" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="inc_i">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_inc_loop" edge="1" parent="1" source="inc_i" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeWidth=2;strokeColor=#000000;fontSize=10;exitX=0.5;exitY=1;" value="continue">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="810" />
+              <mxPoint x="90" y="810" />
+              <mxPoint x="90" y="430" />
+            </Array>
+            <mxPoint x="260" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="start" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;absoluteArcSize=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="начало" vertex="1">
+          <mxGeometry height="34" width="110" x="205" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="vars" parent="1" style="shape=mxgraph.flowchart.annotation_1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="&lt;b&gt;ПЕРЕМЕННЫЕ&lt;/b&gt;&lt;br&gt;planes - массив записей о самолетах&lt;br&gt;indexes - порядок вывода строк&lt;br&gt;count - количество корректных записей&lt;br&gt;i - индекс текущей строки&lt;br&gt;plane - текущая запись для вывода" vertex="1">
+          <mxGeometry height="100" width="320" x="380" y="37" as="geometry" />
+        </mxCell>
+        <mxCell id="out_title" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="вывод&lt;br&gt;&quot;Самолеты по возрастанию&lt;br&gt;времени посадки&quot;" vertex="1">
+          <mxGeometry height="60" width="200" x="160" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="out_header" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="вывод&lt;br&gt;&quot;Время | Марка | Борт |&lt;br&gt;Пункт отправления&quot;" vertex="1">
+          <mxGeometry height="60" width="200" x="160" y="205" as="geometry" />
+        </mxCell>
+        <mxCell id="out_separator" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="вывод&lt;br&gt;&quot;-----------------------------------------&quot;" vertex="1">
+          <mxGeometry height="54" width="220" x="150" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="init_i" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="i = 0" vertex="1">
+          <mxGeometry height="30" width="110" x="205" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="loop_cond" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="i &amp;lt; count" vertex="1">
+          <mxGeometry height="90" width="200" x="160" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="plane_ref" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="plane = planes[indexes[i]]" vertex="1">
+          <mxGeometry height="32" width="220" x="150" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="out_row" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=2;fontSize=10;fillColor=#ffffff;strokeColor=#000000;" value="вывод&lt;br&gt;plane.landingTime, plane.model,&lt;br&gt;plane.boardNumber, plane.city" vertex="1">
+          <mxGeometry height="58" width="230" x="145" y="655" as="geometry" />
+        </mxCell>
+        <mxCell id="inc_i" parent="1" style="whiteSpace=wrap;html=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="i++" vertex="1">
+          <mxGeometry height="30" width="100" x="210" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;absoluteArcSize=1;strokeWidth=2;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="конец" vertex="1">
+          <mxGeometry height="34" width="110" x="485" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_loop_yes" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;" value="да" vertex="1">
+          <mxGeometry height="18" width="24" x="270" y="542" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_loop_no" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;" value="нет" vertex="1">
+          <mxGeometry height="18" width="35" x="365" y="505" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
